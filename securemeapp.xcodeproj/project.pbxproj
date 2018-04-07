@@ -13,6 +13,8 @@
 		BC172463207315FC00751F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC172462207315FC00751F7A /* Assets.xcassets */; };
 		BC172466207315FC00751F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC172464207315FC00751F7A /* LaunchScreen.storyboard */; };
 		BC172471207315FC00751F7A /* securemeappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC172470207315FC00751F7A /* securemeappTests.swift */; };
+		BC17247C2073169B00751F7A /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17247B2073169B00751F7A /* DeviceCell.swift */; };
+		BC17248B2073200600751F7A /* device-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BC1724812073200600751F7A /* device-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +25,28 @@
 			remoteGlobalIDString = BC172457207315FB00751F7A;
 			remoteInfo = securemeapp;
 		};
+		BC1724892073200600751F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC172450207315FB00751F7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC1724802073200600751F7A;
+			remoteInfo = "device-extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC17248F2073200600751F7A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BC17248B2073200600751F7A /* device-extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BC172458207315FB00751F7A /* securemeapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = securemeapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +59,8 @@
 		BC17246C207315FC00751F7A /* securemeappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = securemeappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC172470207315FC00751F7A /* securemeappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = securemeappTests.swift; sourceTree = "<group>"; };
 		BC172472207315FC00751F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC17247B2073169B00751F7A /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
+		BC1724812073200600751F7A /* device-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "device-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +72,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BC172469207315FC00751F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC17247E2073200600751F7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,6 +102,7 @@
 			children = (
 				BC172458207315FB00751F7A /* securemeapp.app */,
 				BC17246C207315FC00751F7A /* securemeappTests.xctest */,
+				BC1724812073200600751F7A /* device-extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +113,7 @@
 				BC17245B207315FB00751F7A /* AppDelegate.swift */,
 				BC17245D207315FB00751F7A /* ViewController.swift */,
 				BC17245F207315FB00751F7A /* Main.storyboard */,
+				BC17247B2073169B00751F7A /* DeviceCell.swift */,
 				BC172462207315FC00751F7A /* Assets.xcassets */,
 				BC172464207315FC00751F7A /* LaunchScreen.storyboard */,
 				BC172467207315FC00751F7A /* Info.plist */,
@@ -106,10 +140,12 @@
 				BC172454207315FB00751F7A /* Sources */,
 				BC172455207315FB00751F7A /* Frameworks */,
 				BC172456207315FB00751F7A /* Resources */,
+				BC17248F2073200600751F7A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BC17248A2073200600751F7A /* PBXTargetDependency */,
 			);
 			name = securemeapp;
 			productName = securemeapp;
@@ -134,6 +170,23 @@
 			productReference = BC17246C207315FC00751F7A /* securemeappTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BC1724802073200600751F7A /* device-extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC17248C2073200600751F7A /* Build configuration list for PBXNativeTarget "device-extension" */;
+			buildPhases = (
+				BC17247D2073200600751F7A /* Sources */,
+				BC17247E2073200600751F7A /* Frameworks */,
+				BC17247F2073200600751F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "device-extension";
+			productName = "device-extension";
+			productReference = BC1724812073200600751F7A /* device-extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -150,6 +203,9 @@
 					BC17246B207315FC00751F7A = {
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = BC172457207315FB00751F7A;
+					};
+					BC1724802073200600751F7A = {
+						CreatedOnToolsVersion = 9.3;
 					};
 				};
 			};
@@ -168,6 +224,7 @@
 			targets = (
 				BC172457207315FB00751F7A /* securemeapp */,
 				BC17246B207315FC00751F7A /* securemeappTests */,
+				BC1724802073200600751F7A /* device-extension */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +247,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC17247F2073200600751F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -199,6 +263,7 @@
 			files = (
 				BC17245E207315FB00751F7A /* ViewController.swift in Sources */,
 				BC17245C207315FB00751F7A /* AppDelegate.swift in Sources */,
+				BC17247C2073169B00751F7A /* DeviceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +275,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC17247D2073200600751F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -217,6 +289,11 @@
 			isa = PBXTargetDependency;
 			target = BC172457207315FB00751F7A /* securemeapp */;
 			targetProxy = BC17246D207315FC00751F7A /* PBXContainerItemProxy */;
+		};
+		BC17248A2073200600751F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC1724802073200600751F7A /* device-extension */;
+			targetProxy = BC1724892073200600751F7A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -359,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HV3FYVB8JV;
 				INFOPLIST_FILE = securemeapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HV3FYVB8JV;
 				INFOPLIST_FILE = securemeapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -428,6 +507,44 @@
 			};
 			name = Release;
 		};
+		BC17248D2073200600751F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HV3FYVB8JV;
+				INFOPLIST_FILE = "device-extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.achan.securemeapp.device-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC17248E2073200600751F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HV3FYVB8JV;
+				INFOPLIST_FILE = "device-extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.achan.securemeapp.device-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -454,6 +571,15 @@
 			buildConfigurations = (
 				BC172479207315FC00751F7A /* Debug */,
 				BC17247A207315FC00751F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC17248C2073200600751F7A /* Build configuration list for PBXNativeTarget "device-extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC17248D2073200600751F7A /* Debug */,
+				BC17248E2073200600751F7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
